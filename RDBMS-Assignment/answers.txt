@@ -1,0 +1,85 @@
+1. What is RDBMS? Why do industries use RDBMS?
+Ans: RDBMS (Relational Database Management System) is a database management system that stores data in tables with rows and columns. It uses SQL (Structured Query Language) for database access. 
+
+Industries use RDBMS because:
+- Data Integrity: Ensures accuracy and consistency of data.
+- Flexibility: Allows complex queries and easy updates.
+- Scalability: Can handle large amounts of data.
+- Security: Provides robust security features.
+- ACID Compliance: Ensures reliable transactions (Atomicity, Consistency, Isolation, Durability).
+
+2. Explain the relationship data model in depth.
+Ans: The relational data model represents data in tables (relations). Each table consists of rows (tuples) and columns (attributes). 
+
+Key components:
+- Tables: Basic structure to store data.
+- Schema: Defines the structure of a table, including columns and their data types.
+- Keys: Primary and foreign keys to uniquely identify rows and establish relationships.
+- Relationships: Connections between tables through foreign keys, enabling complex data retrieval across multiple tables.
+
+3. What is the importance of Relationships in a Database Management System? Explain the types of relationships.
+Ans: Importance:
+- Data Integrity: Maintains accuracy and consistency.
+- Efficient Data Retrieval: Facilitates complex queries.
+- Data Redundancy Reduction: Minimizes data duplication.
+
+Types of Relationships:
+- One-to-One (1:1): A single row in one table is linked to a single row in another.
+- One-to-Many (1:M): A single row in one table is linked to multiple rows in another.
+- Many-to-Many (M:N): Multiple rows in one table are linked to multiple rows in another (usually implemented with a join table).
+
+4. Explain the different types of Keys in RDBMS considering a real-life scenario.
+Ans: 
+- Primary Key: A unique identifier for a table (e.g., Social Security Number for individuals).
+- Foreign Key: A field in one table that uniquely identifies a row of another table (e.g., Employee ID in a projects table).
+- Candidate Key: A column, or set of columns, that can uniquely identify any database record without referring to any other data (e.g., email address or username).
+- Composite Key: A primary key composed of multiple columns (e.g., combination of First Name and Last Name in a contact list).
+- Alternate Key: Candidate keys that are not chosen as the primary key (e.g., email when username is primary).
+- Surrogate Key: A unique identifier for an entity, not derived from application data (e.g., auto-incremented ID).
+
+5. Write a short note on Single Responsibility Principle.
+Ans: The Single Responsibility Principle (SRP) states that a class or module should have only one reason to change, meaning it should have only one job or responsibility. This principle helps in maintaining clean and manageable code, enhancing readability, reducing complexity, and making the codebase easier to test and debug.
+
+6. Explain the different types of errors that could arise in a denormalized database.
+Ans:
+Errors in a denormalized database:
+- Data Redundancy: Repeated data increases storage requirements.
+- Data Inconsistency: Multiple copies of the same data may lead to discrepancies.
+- Update Anomalies: Changes in redundant data require multiple updates.
+- Insert Anomalies: Inserting data can be problematic if all required fields are not available.
+- Delete Anomalies: Deleting data might inadvertently remove useful information.
+
+7. What is normalization and what is the need for normalization?
+Ans: Normalization is the process of organizing data in a database to reduce redundancy and improve data integrity. 
+
+Need for Normalization:
+- Eliminates Redundant Data: Reduces duplicate data.
+- Data Integrity: Ensures data consistency and accuracy.
+- Efficient Data Manipulation: Simplifies data insertion, deletion, and updating.
+- Improves Query Performance: Streamlines query processing by reducing the complexity of data relationships.
+
+8. List out the different levels of Normalization and explain them in detail.
+Ans:
+1. First Normal Form (1NF): Ensures each column contains atomic (indivisible) values and each record is unique.
+2. Second Normal Form (2NF): Meets 1NF requirements and ensures that all non-key attributes are fully functionally dependent on the primary key.
+3. Third Normal Form (3NF): Meets 2NF requirements and ensures that all the attributes are not only fully functionally dependent on the primary key but also non-transitively dependent.
+4. Boyce-Codd Normal Form (BCNF): A stronger version of 3NF where every determinant is a candidate key.
+5. Fourth Normal Form (4NF): Meets BCNF requirements and ensures no multi-valued dependencies.
+6. Fifth Normal Form (5NF): Ensures no join dependencies, meaning the data is split into the smallest possible related tables.
+
+9. What are joins and why do we need them?
+Ans: Joins are SQL operations used to combine rows from two or more tables based on a related column between them.
+
+Need for Joins:
+- Data Retrieval: Combine related data from multiple tables into a single result set.
+- Query Simplification: Simplifies complex queries by breaking them into manageable parts.
+- Data Analysis: Facilitates comprehensive data analysis by aggregating related data.
+
+10. Explain the different types of joins.
+Ans:
+- Inner Join: Returns records that have matching values in both tables.
+- Left (Outer) Join: Returns all records from the left table and matched records from the right table. Unmatched rows will show NULL.
+- Right (Outer) Join: Returns all records from the right table and matched records from the left table. Unmatched rows will show NULL.
+- Full (Outer) Join: Returns all records when there is a match in either left or right table. Unmatched rows will show NULL.
+- Cross Join: Returns the Cartesian product of the two tables, combining all rows from both tables.
+- Self Join: Joins a table with itself to relate rows within the same table.
